@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.box {
+  background-color: var(--main-color1);
+  padding: 24px;
+  border-radius: 12px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.h1 {
+  font-size: 44px;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 4px;
+}
+.p1 {
+  margin-bottom: 20px;
+  color: var(--light-bg2);
+  text-align: center;
+}
+.p {
+  margin-bottom: 20px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+.input {
+  padding: 12px;
+  background-color: var(--main-color2);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  min-width: 300px;
+  color: var(--dark-bg);
+}
+.button {
+  align-self: center;
+  padding: 12px 18px;
+  border: none;
+  background-color: var(--main-color);
+  color: var(--light-bg);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+}
