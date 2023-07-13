@@ -1,0 +1,116 @@
+.app_box {
+  width: 80%;
+  max-width: 800px;
+  /* background-color: var(--main-color1); */
+  padding: 18px;
+  margin: 24px auto 0 auto;
+}
+.h1 {
+  margin-bottom: 12px;
+  color: var(--main-color5);
+  text-align: center;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  background-color: var(--main-color1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.input {
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  padding: 18px 14px;
+  outline: none;
+  text-indent: 4px;
+  font-size: 18px;
+  caret-color: var(--main-color);
+}
+/* .input:focus {
+  background-color: var(--main-color3);
+} */
+.button {
+  background-color: var(--main-color2);
+  width: auto;
+  flex-grow: 1;
+  border: none;
+  /* width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: var(--light-bg);
+  cursor: pointer; */
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.button:hover {
+  background-color: var(--main-color3);
+}
+.button i {
+  font-size: 20px;
+  color: var(--dark-bg3);
+  transition: color 0.3s;
+}
+.button:hover i {
+  color: var(--dark-bg);
+}
+.todos_box {
+  background-color: var(--main-color1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.todo_item {
+  padding: 16px 12px;
+  /* background-color: var(--main-color1); */
+  font-size: 18px;
+  border-bottom: 2px solid var(--main-color2);
+  display: flex;
+  align-items: center;
+}
+.checkmark {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  border: 1px solid var(--main-color2);
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+.checkmark:hover {
+  border-color: var(--main-color5);
+}
+.checkmark_complete {
+  background-color: var(--main-color5);
+}
+.checkmark i {
+  color: var(--light-bg);
+}
+.todo_text {
+  margin-right: auto;
+}
+.todo_complete {
+  text-decoration: line-through;
+  color: var(--dark-bg3);
+}
+.edit_todo {
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.delete_todo {
+  cursor: pointer;
+  font-size: 18px;
+}
+.delete_todo i {
+  transition: color 0.3s;
+}
+.delete_todo:hover i {
+  color: rgb(234, 55, 27);
+}

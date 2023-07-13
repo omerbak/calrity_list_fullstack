@@ -1,8 +1,39 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+}
+.headline {
+  margin-top: 62px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.headline h1 {
+  font-size: 54px;
+  color: var(--main-color);
+}
+.headline h3 {
+  font-size: 24px;
+  color: var(--light-bg);
+  font-weight: 400;
+}
+.links button {
+  display: block;
+  text-align: center;
+  background-color: var(--main-color2);
+  width: 100px;
+  padding: 10px 0;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.links button:hover {
+  background-color: var(--main-color4);
+}
+.links a {
+  text-decoration: none;
 }

@@ -1,9 +1,10 @@
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Proza_Libre, Roboto } from "next/font/google";
 import AuthProvider from "@/components/AuthProvider";
-
-const roboto = Roboto({
-  weight: ["300", "500", "700"],
+import Nav from "@/components/nav/Nav";
+import "remixicon/fonts/remixicon.css";
+const proza = Proza_Libre({
+  weight: ["400", "500", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -17,9 +18,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={proza.className}>
         <div className="container">
-          <AuthProvider>{children}</AuthProvider>
+          <AuthProvider>
+            <Nav />
+            {children}
+          </AuthProvider>
         </div>
       </body>
     </html>

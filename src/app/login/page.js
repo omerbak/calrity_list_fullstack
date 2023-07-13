@@ -3,17 +3,21 @@ import React from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 const Login = () => {
   const router = useRouter();
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const email = e.target[0].value;
-    const password = e.target[1].value;
-
-    signIn("credentials", { email, password });
-    //router.push("/todos");
+    const email = e.target[0].value.trim();
+    const password = e.target[1].value.trim();
+    console.log(email, password);
+    signIn("credentials", {
+      email,
+      password,
+      callbackUrl: "http://localhost:3000/todos",
+    });
   };
   return (
     <div className={styles.container}>
@@ -42,6 +46,9 @@ const Login = () => {
           />
           <button className={styles.button}>LogIn</button>
         </form>
+        <span className={styles.span}>
+          You don't have an account? <Link href="/signup">Sign up</Link>
+        </span>
       </div>
     </div>
   );
