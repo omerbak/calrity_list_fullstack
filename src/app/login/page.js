@@ -4,9 +4,22 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { useSearchParams } from "next/navigation";
 
 const Login = () => {
   const router = useRouter();
+  const session = useSession();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (session.status === "authenticated") {
+      router.push("/todos");
+    }
+  }, [session]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -19,6 +32,10 @@ const Login = () => {
       callbackUrl: "http://localhost:3000/todos",
     });
   };
+
+  const loginErorr = searchParams.get("error");
+
+  /* console.log("params: ", loginErorr); */
   return (
     <div className={styles.container}>
       <div>
@@ -44,6 +61,9 @@ const Login = () => {
             required
             className={styles.input}
           />
+          <p className={styles.loginErorr}>
+            {loginErorr && "Wrong Email or Password!"}
+          </p>
           <button className={styles.button}>LogIn</button>
         </form>
         <span className={styles.span}>

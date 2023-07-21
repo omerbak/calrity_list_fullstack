@@ -14,7 +14,7 @@ const Nav = () => {
     <nav className={styles.nav}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src={logo} fill alt="clarity logo" />
+          <Image src={logo} alt="clarity logo" />
         </Link>
       </div>
       <div className={styles.user_box}>

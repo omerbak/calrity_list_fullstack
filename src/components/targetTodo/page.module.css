@@ -1,0 +1,52 @@
+.form_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(54, 49, 48, 0.97);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+.form {
+  width: 80%;
+  max-width: 800px;
+  padding: 24px 12px;
+  background-color: var(--light-bg);
+  border-radius: 4px;
+}
+.form_input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: var(--main-color2);
+  outline: none;
+  margin-bottom: 16px;
+  font-size: 18px;
+  box-shadow: inset 0px 0px 2px rgba(17, 29, 12, 0.95);
+}
+.form_input:focus {
+  background-color: var(--main-color3);
+}
+.button {
+  padding: 10px 24px;
+  margin-right: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--dark-bg);
+  font-weight: 700;
+}
+.cofirm {
+  background-color: var(--main-color4);
+  box-shadow: 0 2px 3px rgba(17, 29, 12, 0.5);
+}
+
+.cancel {
+  background-color: var(--main-color1);
+  box-shadow: 0 1px 3px rgba(17, 29, 12, 0.5);
+}

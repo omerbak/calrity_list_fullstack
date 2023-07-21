@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const [error, setError] = useState(null);
@@ -23,10 +24,14 @@ const Signup = () => {
           password,
         }),
       });
+
       console.log(res);
       if (res.status === 201) {
-        console.log("success user created");
-        //  router.push("/login");
+        toast.success(res.statusText);
+        router.push("/login");
+        setError(null);
+      } else if (res.status === 400) {
+        setError(res.statusText);
       }
     } catch (err) {
       setError(err);
@@ -64,7 +69,7 @@ const Signup = () => {
             required
             className={styles.input}
           />
-          <p>{error && "something went wrong"}</p>
+          <p className={styles.error}>{error && error}</p>
           <button className={styles.button}>Sign Up</button>
         </form>
       </div>

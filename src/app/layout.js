@@ -3,6 +3,8 @@ import { Proza_Libre, Roboto } from "next/font/google";
 import AuthProvider from "@/components/AuthProvider";
 import Nav from "@/components/nav/Nav";
 import "remixicon/fonts/remixicon.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const proza = Proza_Libre({
   weight: ["400", "500", "700"],
   style: ["normal", "italic"],
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
             {children}
           </AuthProvider>
         </div>
+        <ToastContainer autoClose={2000} />
       </body>
     </html>
   );

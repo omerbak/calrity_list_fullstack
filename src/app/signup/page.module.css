@@ -51,6 +51,13 @@
   color: var(--light-bg);
   font-weight: 500;
   font-size: 18px;
-  border-radius: 12px;
+  border-radius: 4px;
   cursor: pointer;
+}
+.error {
+  font-size: 14px;
+  color: rgb(219, 59, 59);
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
 }

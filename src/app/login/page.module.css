@@ -52,7 +52,7 @@
   color: var(--light-bg);
   font-weight: 500;
   font-size: 18px;
-  border-radius: 12px;
+  border-radius: 4px;
   cursor: pointer;
 }
 .span {
@@ -63,4 +63,9 @@
   text-decoration: none;
   color: var(--accent1);
   font-weight: 700;
+}
+.loginErorr {
+  text-align: center;
+  color: rgb(236, 69, 69);
+  font-size: 14px;
 }
