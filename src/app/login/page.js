@@ -29,7 +29,7 @@ const Login = () => {
     signIn("credentials", {
       email,
       password,
-      callbackUrl: "http://localhost:3000/todos",
+      callbackUrl: "/todos",
     });
   };
 
