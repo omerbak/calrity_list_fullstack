@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 export const GET = async (req) => {
   const url = new URL(req.url);
   const email = url.searchParams.get("email");
-  console.log(email);
+  /* console.log(email); */
 
   try {
     await connectDB();
