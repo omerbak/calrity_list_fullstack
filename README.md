@@ -1,7 +1,7 @@
 # Clarity List
 Clarity List is a full-stack app that is designed to help users organize and navigate their days with more ease and clarity. In this app, a user can create an account. Then, add, check, modify, and delete tasks easily.
 
-**Link to project:** [http://recruiters-love-seeing-live-demos.com/](https://calrity-list-fullstack.vercel.app/)
+**Link to project:** https://calrity-list-fullstack.vercel.app
 
 ![clarity list app](https://ik.imagekit.io/fgnrlp6iw/clarity.PNG?updatedAt=1692272600194)
 
